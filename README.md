@@ -4,16 +4,16 @@
 
 The CDR Forensic Analysis Dashboard is a Python-based forensic analysis system developed for analyzing Call Detail Records (CDRs) obtained from telecom billing data.
 
-The project processes call and SMS records to identify communication patterns, active hours, frequently contacted numbers, suspicious behavior, and approximate location activity using data visualization and an interactive web dashboard.
+The project processes call and SMS records to identify communication patterns, active hours, frequently contacted numbers, suspicious behavior, and approximate location activity using data visualization and an interactive Flask dashboard.
 
-The system combines forensic data analysis, telecom simulation, visualization, and Flask-based dashboard integration to simplify investigation and communication trend analysis.
+The system combines forensic data analysis, telecom simulation, visualization, and dashboard integration to simplify communication trend analysis and forensic investigation workflows.
 
 ---
 
-## Features
+## Key Features
 
 ### Call Analysis
-- Top contacted numbers
+- Frequently contacted numbers
 - Daily call activity trends
 - Active communication hours
 
@@ -37,7 +37,7 @@ Detection based on:
 
 ### Interactive Dashboard
 - Flask-based web interface
-- Navigation sidebar
+- Sidebar navigation
 - Graph visualization
 - Interactive map integration
 
@@ -50,12 +50,12 @@ Interactive telecom activity visualization using Folium maps.
 
 | Technology | Purpose |
 |---|---|
-| Python | Backend logic and analysis |
-| Pandas | Data processing |
+| Python | Backend logic and forensic analysis |
+| Pandas | Data processing and analysis |
 | Matplotlib | Graph generation |
-| Flask | Web dashboard |
+| Flask | Web dashboard integration |
 | Folium | Map visualization |
-| HTML/CSS | Frontend interface |
+| HTML/CSS | Frontend dashboard interface |
 
 ---
 
@@ -68,8 +68,10 @@ CDR-Forensic-Analysis/
 ├── UI_script.py
 ├── web_page.html
 ├── map.html
+├── requirements.txt
 ├── CDR_Report.pdf
 ├── README.md
+├── LICENSE
 ├── .gitignore
 │
 ├── graphs/
@@ -81,22 +83,22 @@ CDR-Forensic-Analysis/
 
 ## Workflow
 
-1. Collect CDR data from telecom billing records
+1. Collect telecom CDR data from billing records
 2. Convert extracted records into CSV format
 3. Process datasets using Python and Pandas
 4. Generate communication analysis graphs
 5. Detect suspicious communication behavior
 6. Generate telecom simulation details
-7. Visualize results using Flask dashboard and Folium maps
+7. Display results through Flask dashboard and Folium maps
 
 ---
 
 ## Installation
 
-Install required libraries:
+Install required dependencies:
 
 ```bash
-pip install pandas matplotlib flask folium
+pip install -r requirements.txt
 ```
 
 ---
@@ -135,16 +137,6 @@ The system generates:
 
 ---
 
-## Privacy Note
-
-Sensitive telecom data and phone numbers have been anonymized/masked for privacy purposes. Raw datasets are excluded from this repository.
-
----
-
-## Academic Purpose
-
-Developed as part of Digital Forensics and Information Security (DFIS) practical forensic analysis and visualization work.
-
 ## Dashboard Preview
 
 ### Main Dashboard
@@ -163,22 +155,32 @@ Developed as part of Digital Forensics and Information Security (DFIS) practical
 
 ![Suspicious Analysis](screenshots/cmd_suspicious_analysis.png)
 
-## System Workflow
+---
 
-1. Collect telecom CDR data
-2. Extract and structure records into CSV format
-3. Process records using Python and Pandas
-4. Generate communication analysis graphs
-5. Detect suspicious communication behavior
-6. Generate telecom simulation details
-7. Display results using Flask dashboard and Folium maps
+## Dataset Notice
+
+The original CDR datasets used in this project are not included in the repository due to privacy and sensitive telecom data considerations.
+
+All screenshots, outputs, and reports have been anonymized/masked for demonstration purposes.
+
+---
+
+## Privacy Note
+
+Sensitive telecom data and phone numbers have been anonymized for privacy purposes. Raw datasets are excluded from this repository.
+
+---
 
 ## Future Enhancements
 
 - Real telecom API integration
-- Advanced anomaly detection using machine learning
 - Automated PDF extraction
-- Real-time dashboard monitoring
+- Advanced anomaly detection
 - Database integration
+- Real-time monitoring dashboard
 
+---
 
+## Academic Purpose
+
+Developed as part of Digital Forensics and Information Security (DFIS) practical forensic analysis and visualization work.
