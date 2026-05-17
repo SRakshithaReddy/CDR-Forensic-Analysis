@@ -162,3 +162,23 @@ Developed as part of Digital Forensics and Information Security (DFIS) practical
 ### Suspicious Activity Analysis
 
 ![Suspicious Analysis](screenshots/cmd_suspicious_analysis.png)
+
+## System Workflow
+
+1. Collect telecom CDR data
+2. Extract and structure records into CSV format
+3. Process records using Python and Pandas
+4. Generate communication analysis graphs
+5. Detect suspicious communication behavior
+6. Generate telecom simulation details
+7. Display results using Flask dashboard and Folium maps
+
+## Future Enhancements
+
+- Real telecom API integration
+- Advanced anomaly detection using machine learning
+- Automated PDF extraction
+- Real-time dashboard monitoring
+- Database integration
+
+
