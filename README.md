@@ -144,3 +144,21 @@ Sensitive telecom data and phone numbers have been anonymized/masked for privacy
 ## Academic Purpose
 
 Developed as part of Digital Forensics and Information Security (DFIS) practical forensic analysis and visualization work.
+
+## Dashboard Preview
+
+### Main Dashboard
+
+![Web Dashboard](screenshots/webpage.png)
+
+### Map Visualization
+
+![Map UI](screenshots/map_ui.png)
+
+### Map Close-Up
+
+![Map Closeup](screenshots/map_ui_closeup.png)
+
+### Suspicious Activity Analysis
+
+![Suspicious Analysis](screenshots/cmd_suspicious_analysis.png)
