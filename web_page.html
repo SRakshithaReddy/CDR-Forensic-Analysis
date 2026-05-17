@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CDR Forensic Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            background: #2c3e50;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .sidebar button {
+            width: 90%;
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            background: #34495e;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background: #1abc9c;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        img {
+            width: 60%;
+            margin-top: 10px;
+        }
+
+        iframe {
+            width: 90%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+
+    <script>
+        function showSection(id) {
+            var sections = document.getElementsByClassName("section");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>CDR Tool</h2>
+    <button onclick="showSection('overview')">Overview</button>
+    <button onclick="showSection('calls')">Call Analysis</button>
+    <button onclick="showSection('sms')">SMS Analysis</button>
+    <button onclick="showSection('suspicious')">Suspicious</button>
+    <button onclick="showSection('map')">Map</button>
+</div>
+
+<div class="content">
+
+    <!-- OVERVIEW -->
+    <div id="overview" class="section active">
+        <h2>Overview</h2>
+        <p>Total Calls: {{ total_calls }}</p>
+        <p>Total SMS: {{ total_sms }}</p>
+        <p>Total Duration: {{ total_duration }}</p>
+    </div>
+
+    <!-- CALL ANALYSIS -->
+    <div id="calls" class="section">
+        <h2>Call Analysis</h2>
+        <img src="/graphs/top_contacts.png">
+        <img src="/graphs/active_hours.png">
+        <img src="/graphs/daily_trend.png">
+    </div>
+
+    <!-- SMS ANALYSIS -->
+    <div id="sms" class="section">
+        <h2>SMS Analysis</h2>
+        <img src="/graphs/top_sms.png">
+        <img src="/graphs/sms_hours.png">
+    </div>
+
+    <!-- SUSPICIOUS -->
+    <div id="suspicious" class="section">
+        <h2>Suspicious Activity</h2>
+        <img src="/graphs/suspicious.png">
+    </div>
+
+    <!-- MAP -->
+    <div id="map" class="section">
+        <h2>Cell Tower Map</h2>
+        <iframe src="/graphs/map.html"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
